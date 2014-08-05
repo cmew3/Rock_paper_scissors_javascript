@@ -215,4 +215,16 @@ describe("Rock-Paper-Scissors", function() {
 
   });
 
+  describe('when it is a computer', function() {
+
+    it('can make a random pick', function() {
+      expect(player1.pick).toEqual(null);
+      player1.makeRandomPick();
+      console.log(player1.pick)
+      expect(["rock","paper","scissors","lizard","spock"].indexOf(player1.pick)).not.toEqual(-1)
+
+    });
+
+    });
+
 });

@@ -1,0 +1,80 @@
+body {
+	background-color: rgb(31,26,25);
+}
+
+h1 {
+	color: white;
+	font-family: Arizonia;
+	font-size: 60px;
+	margin: 10px;
+	padding:20px;
+	}
+
+#choices img{
+	margin-top: 20px;
+	margin-right: 30px;
+	margin-bottom: 20px;
+	width: 10%;
+	cursor: pointer;
+	border: solid rgb(31,26,25);
+}
+
+#choices img:hover{
+	background-color: red;
+	border: solid red;
+	border-radius: 8px;
+	transition: 0.5s opacity ease;
+	transition: 0.5s border ease;
+	opacity: 1;
+}
+
+#results {
+	padding: 10px;
+	color: white;
+
+}
+
+#results li {
+	list-style-type: none;
+	width: 50%;
+	color: white;
+	border-radius: 8px;
+	margin: 4px 50px;
+	padding: 5px;
+	/*background-color: rgba(280,0,0,0.5);*/
+	font-style: Helvetica; 
+	margin-bottom: 10px;
+	display: none;
+	text-align: center;
+
+}
+
+.draw {
+	background-color: #003399;
+}
+
+.winner {
+	background-color: #006633;
+}
+
+.loser {
+	background-color: #780000;
+}
+
+#results li:nth-child(1) { opacity: 1; }
+#results li:nth-child(2) { opacity: 0.8; }
+#results li:nth-child(3) { opacity: 0.6; }
+#results li:nth-child(4) { opacity: 0.4; }
+#results li:nth-child(5) { opacity: 0.2; }
+
+/*#results li:nth-child(1) { background-color: #636393; }
+#results li:nth-child(2) { background-color: #B5222D; }
+#results li:nth-child(3) { background-color: #D4953C; }
+#results li:nth-child(4) { background-color: #609491; }
+#results li:nth-child(5) { background-color: #87A248; }*/
+
+/*#results li:nth-child(1) { background-color: #C80000; }
+#results li:nth-child(2) { background-color: #A80000; }
+#results li:nth-child(3) { background-color: #880000; }
+#results li:nth-child(4) { background-color: #680000; }
+#results li:nth-child(5) { background-color: #480000; }*/
