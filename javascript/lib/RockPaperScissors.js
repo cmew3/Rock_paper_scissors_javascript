@@ -26,8 +26,6 @@ Game.prototype.winner = function() {
 }
 };
 
-// Game.prototype.BEATS = {"rock": ["scissors","lizard"], "paper": ["rock","spock"],"scissors":["paper","lizard"],"lizard":["paper","spock"],"spock":["rock","scissors"]};
-
 Game.prototype.BEATS = {"rock": {scissors: "crushes", lizard: "crushes"},
 						"paper": {rock: "covers", spock: "disproves"},
 						"scissors": {paper: "cuts", lizard: "decapitates"},
@@ -40,16 +38,18 @@ Game.prototype._isSamePick = function() {
 };
 
 Game.prototype.victoryMessage = function() {
+  if (this.winner()===null) {
+    return "Draw"
+  } else {
 	return this.winner().name + "'s " + this.winner().pick + " " + this.victoryMethod() +" "+ this.loser().name + "'s " + this.loser().pick
+  }
 };
 
 Game.prototype.loser = function() {
 	if (this._isSamePick()) {
     return null;
-} else if (this.winner()===this.player2) {
-    return this.player1;
 } else {
-    return this.player2;
+    return (this.winner()===this.player2) ? this.player1 : this.player2;
 }
 };
 
